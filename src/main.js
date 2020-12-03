@@ -44,7 +44,9 @@ Object.keys(filters).forEach(key => {
 })
 
 Vue.config.productionTip = false
-
+console.log('---Store----')
+console.log(store.state)
+console.log('--------------------')
 new Vue({
   el: '#app',
   router,

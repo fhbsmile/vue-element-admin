@@ -13,9 +13,16 @@ export default {
   name: 'AppMain',
   computed: {
     cachedViews() {
+      const views = this.$store.state.tagsView.cachedViews
+      console.log('cachedViews:%s', views)
+      const len = views.length
+      for (let i = 0; i < len; i++) {
+        console.log('view[%s]:%s', i, views[i])
+      }
       return this.$store.state.tagsView.cachedViews
     },
     key() {
+      console.log('Key:%s', this.$route.path)
       return this.$route.path
     }
   }
